@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Text from "./Text";
-import Card3 from "./Card3";
 
 const Contentlist = [
   { id: 1, foto: "/images/html.png", nama: "HTML" },
@@ -15,20 +14,32 @@ const Contentlist = [
 ];
 
 const About = () => {
-  const text = "Front-End Web Developer"; // Kata yang akan diketik
-  const [displayedText, setDisplayedText] = useState(""); // Untuk animasi teks
-  const [index, setIndex] = useState(0); // Menunjukkan posisi huruf saat ini
+  const text = "Front-End Web Developer";
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Deteksi apakah perangkat mobile
+    const checkScreenSize = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   useEffect(() => {
     if (index < text.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText(text.slice(0, index + 1)); // Tambah huruf satu per satu
+        setDisplayedText(text.slice(0, index + 1));
         setIndex(index + 1);
-      }, 200); // Kecepatan mengetik
-
+      }, 200);
       return () => clearTimeout(timeout);
     }
-  }, [index]); // Efek hanya berjalan hingga teks selesai diketik
+  }, [index]);
 
   return (
     <section id="About">
@@ -42,7 +53,6 @@ const About = () => {
         >
           <Text variant="">Hello, my name is</Text>
 
-          {/* Efek mengetik pada "Faiz" */}
           <h1 className="text-5xl lg:text-7xl text-teal-500 tracking-tight font-bold mt-3">
             <span className="block">Faiz</span>
             <span className="block text-black">Muhammad</span>
@@ -70,9 +80,7 @@ const About = () => {
             src="/Profile.png"
             alt=""
             className="bg-slate-200 rounded-tl-4xl rounded-br-4xl hover:bg-slate-300 md:h-64 md:px-3 md:ml-86 lg:h-64 lg:px-22"
-            transition={{
-              duration: 0.3,
-            }}
+            transition={{ duration: 0.3 }}
           />
         </motion.div>
 
@@ -103,18 +111,27 @@ const About = () => {
           </h1>
           <div className="relative lg:w-110 flex -mt-2">
             <div className="grid grid-cols-4 lg:grid-cols-8 lg:w-full py-4 rounded-lg">
-              {Contentlist.map((List, index) => (
+              {Contentlist.map((List) => (
                 <motion.div
                   key={List.id}
                   className="w-[98%] md:w-18 lg:w-14 opacity-40 py-1 flex flex-col hover:opacity-100 z-[99] group"
-                  whileHover={{
-                    scale: 1.1,
-                    boxShadow: "0px 4px 15px rgba(0, 255, 255, 0.5)",
-                  }}
-                  transition={{
-                    duration: 0.3,
-                    ease: "easeOut",
-                  }}
+                  whileHover={
+                    !isMobile
+                      ? {
+                          scale: 1.1,
+                          boxShadow: "0px 4px 15px rgba(0, 255, 255, 0.5)",
+                        }
+                      : {}
+                  }
+                  whileTap={
+                    isMobile
+                      ? {
+                          scale: 1.1,
+                          boxShadow: "0px 4px 15px rgba(0, 255, 255, 0.5)",
+                        }
+                      : {}
+                  }
+                  transition={{ duration: 0.3, ease: "easeOut" }}
                 >
                   <img src={List.foto} alt={List.nama} className="w-full" />
                   <Text variant="font-bold text-[12px] lg:text-[7px] text-white text-center group-hover:text-black">
@@ -125,7 +142,6 @@ const About = () => {
             </div>
           </div>
         </div>
-        {/* <Card3 /> */}
       </div>
     </section>
   );

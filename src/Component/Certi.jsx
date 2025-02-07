@@ -1,7 +1,21 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function Certi() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+
+    checkScreenSize(); // Cek saat komponen pertama kali dimuat
+    window.addEventListener("resize", checkScreenSize); // Update saat resize
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const sertifikat = [
     {
       id: 1,
@@ -64,14 +78,16 @@ export default function Certi() {
           <motion.div
             key={certi.id}
             className="relative bg-slate-100 p-6 rounded-sm w-80 text-black shadow-lg flex flex-col justify-between h-[180px]"
-            whileHover={{
-              scale: 1.1,
-              boxShadow: "0px 4px 15px rgba(0, 255, 255, 0.5)",
-            }}
-            transition={{
-              duration: 0.3,
-              ease: "easeOut",
-            }}
+            whileHover={
+              !isMobile
+                ? {
+                    scale: 1.1,
+                    boxShadow: "0px 4px 15px rgba(0, 255, 255, 0.5)",
+                  }
+                : {}
+            }
+            whileTap={isMobile ? { scale: 1.1 } : {}}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             {/* Title */}
             <h3 className="text-lg font-semibold min-h-[60px]">
