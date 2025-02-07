@@ -1,0 +1,63 @@
+import { motion } from "framer-motion";
+import Text from "./Text";
+
+const About = () => {
+  return (
+    <div className="content absolute top-40 mx-4">
+      {/* Animasi teks muncul dari bawah */}
+      <motion.div
+        className="text md:-mt-14"
+        initial={{ opacity: 0, x: -100 }} // Mulai dari bawah dan transparan
+        whileInView={{ opacity: 1, x: 0 }} // Muncul saat di-scroll
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <Text variant="">Hello, my name is</Text>
+        <h1 className="text-5xl tracking-tight font-bold mt-3">
+          Faiz Muhammad{" "}
+          <span className="block text-right">
+            Ramadhan<span className="text-3xl">.</span>
+          </span>
+        </h1>
+        <Text variant="text-right text-xl font-semibold right-4">
+          I'm a{" "}
+          <span className="text-teal-500 font-semibold">
+            Front-End Web Developer
+          </span>
+        </Text>
+      </motion.div>
+
+      {/* Animasi gambar profile muncul dari kiri */}
+      <motion.div
+        className="profile mt-4"
+        initial={{ opacity: 0, x: 0 }} // Mulai dari kiri dan transparan
+        whileInView={{ opacity: 1, x: 0 }} // Muncul saat di-scroll
+        transition={{ duration: 0.8, ease: "easeOut" }}>
+        <img
+          src="/Profile.png"
+          alt=""
+          className="bg-slate-200 rounded-tl-4xl rounded-br-4xl hover:bg-slate-300"
+        />
+      </motion.div>
+
+      {/* Animasi teks About Me muncul dari kanan */}
+      <motion.div
+        className="deskripsi mt-7"
+        initial={{ opacity: 0, y: 50 }} // Mulai dari kanan dan transparan
+        whileInView={{ opacity: 1, y: 0 }} // Muncul saat di-scroll
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }} // Delay agar lebih smooth
+      >
+        <h1 className="text-4xl font-bold tracking-widest">
+          ABOUT <span className="block textri">ME</span>
+        </h1>
+        <Text variant="text-justify">
+          Hello! I am passionate about website development, especially frontend
+          with ReactJS and Tailwind CSS, which I am currently exploring. With a
+          strong eagerness to learn and good communication skills, I am ready to
+          collaborate to create high-quality digital solutions.
+        </Text>
+      </motion.div>
+    </div>
+  );
+};
+
+export default About;
