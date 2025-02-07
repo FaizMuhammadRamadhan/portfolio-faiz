@@ -123,24 +123,13 @@ const About = () => {
                         }
                       : {}
                   }
-                  whileTap={
-                    isMobile
-                      ? {
-                          scale: 1.1,
-                          boxShadow: "0px 4px 15px rgba(0, 255, 255, 0.5)",
-                        }
-                      : {}
-                  }
+                  whileTap={isMobile ? { scale: 1.1 } : {}}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
                   <img src={List.foto} alt={List.nama} className="w-full" />
-                  <motion.p
-                    className="font-bold text-[12px] lg:text-[7px] text-white text-center"
-                    whileHover={{ color: "black" }}
-                    whileTap={isMobile ? { color: "black" } : {}}
-                  >
+                  <p className="font-bold text-[12px] lg:text-[7px] text-white text-center lg:group-hover:text-black md:group-hover:text-black block md:hidden lg:block">
                     {List.nama}
-                  </motion.p>
+                  </p>
                 </motion.div>
               ))}
             </div>
