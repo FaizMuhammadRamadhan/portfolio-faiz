@@ -134,9 +134,13 @@ const About = () => {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
                   <img src={List.foto} alt={List.nama} className="w-full" />
-                  <Text variant="font-bold text-[12px] lg:text-[7px] text-white text-center group-hover:text-black">
+                  <motion.p
+                    className="font-bold text-[12px] lg:text-[7px] text-white text-center"
+                    whileHover={{ color: "black" }}
+                    whileTap={isMobile ? { color: "black" } : {}}
+                  >
                     {List.nama}
-                  </Text>
+                  </motion.p>
                 </motion.div>
               ))}
             </div>
