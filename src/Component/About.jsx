@@ -114,7 +114,7 @@ const About = () => {
               {Contentlist.map((List) => (
                 <motion.div
                   key={List.id}
-                  className="w-[98%] md:w-18 lg:w-14 opacity-40 py-1 flex flex-col hover:opacity-100 z-[99] group"
+                  className="max-w-[95%] justify-between md:w-18 lg:w-14 opacity-40 py-1 flex flex-col hover:opacity-100 z-[99] group"
                   whileHover={
                     !isMobile
                       ? {

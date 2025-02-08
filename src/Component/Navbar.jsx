@@ -85,7 +85,7 @@ const Navbar = () => {
             <a
               href="/CV-Faiz.pdf"
               download="CV-Faiz.pdf"
-              className="absolute right-14 cursor-pointer z-[99px] md:top-[15px] items-center md:block text-sm bg-black text-white py-2 px-3 rounded-full hover:shadow-2xl"
+              className="absolute right-14 -mt-0.5 cursor-pointer z-[99px] md:top-[15px] items-center md:block text-sm bg-black text-white py-2 px-3 rounded-full hover:shadow-2xl"
             >
               My CV
             </a>
