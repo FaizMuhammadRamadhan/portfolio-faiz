@@ -32,6 +32,15 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const handleDownloadCV = () => {
+    setIsOpen(false);
+    const link = document.createElement("a");
+    link.href = "/doc/cv.pdf";
+    link.download = "cv-faiz.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <header className="bg-white shadow-md">
@@ -81,7 +90,6 @@ const Navbar = () => {
           />
         )}
 
-        {/* Sidebar Mobile */}
         <div
           className={`fixed top-0 right-0 h-screen w-fit min-w-[240px] bg-slate-900/95 backdrop-blur-xl border-l border-slate-800 rounded-l-3xl shadow-2xl z-50 px-8 py-10 flex flex-col justify-between items-end transform transition-all duration-300 ease-out md:hidden ${
             isOpen
@@ -110,10 +118,19 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="w-full pt-6 border-t border-slate-800 flex justify-end">
-            <Button variant="w-full text-black bg-teal-400 hover:bg-teal-300 font-medium py-2.5 px-5 rounded-xl text-sm transition-colors text-center shadow-lg shadow-teal-500/10">
-              Download My CV
-            </Button>
+          <div className="w-full py-6 border-t border-slate-800 flex justify-end">
+            <a
+              href="/doc/cv-faiz.pdf"
+              download="cv-faiz.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="w-full"
+            >
+              <Button variant="w-full text-black bg-teal-400 hover:bg-teal-300 font-medium py-2.5 px-5 rounded text-sm transition-colors text-center shadow-lg shadow-teal-500/10">
+                Download My CV
+              </Button>
+            </a>
           </div>
         </div>
       </nav>

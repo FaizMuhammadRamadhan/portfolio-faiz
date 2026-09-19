@@ -10,6 +10,14 @@ const NavLink = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/doc/cv.pdf";
+    link.download = "cv-faiz.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <>
@@ -33,7 +41,7 @@ const NavLink = () => {
       </div>
 
       <div className="hidden md:block">
-        <Cv>Download My CV</Cv>
+        <Cv onClick={handleDownloadCV}>Download My CV</Cv>
       </div>
     </>
   );
@@ -45,9 +53,11 @@ const styleDefault =
 
 const Cv = ({ children }) => {
   return (
-    <div>
-      <Button variant={styleDefault}>{children}</Button>
-    </div>
+    <a href="/doc/cv-faiz.pdf" download="cv-faiz.pdf" target="_blank" rel="noopener noreferrer">
+      <Button variant={styleDefault}>
+        {children}
+      </Button>
+    </a>
   );
 };
 
