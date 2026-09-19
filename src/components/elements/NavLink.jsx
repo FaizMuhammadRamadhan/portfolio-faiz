@@ -10,10 +10,16 @@ const NavLink = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <>
-      <img src="/images/logo.png" alt="Logo" className="h-13 rounded-lg" />
-      <div className="flex">
+      <img
+        src="/images/logo.png"
+        alt="Logo"
+        className="h-12 rounded-lg object-contain my-auto"
+      />
+
+      <div className="hidden md:flex">
         {navigation.map((itemlink) => (
           <a
             key={itemlink.id}
@@ -25,17 +31,22 @@ const NavLink = () => {
           </a>
         ))}
       </div>
-      <Cv>Download My CV</Cv>
+
+      <div className="hidden md:block">
+        <Cv>Download My CV</Cv>
+      </div>
     </>
   );
 };
+const styleDefault =
+  "relative z-10 overflow-hidden bg-black text-white px-2 py-1 md:px-5 md:py-2 rounded font-medium transition-colors duration-300 text-center " +
+  "before:absolute before:left-0 before:top-0 before:w-full before:h-0 before:bg-teal-500 before:-z-10 " +
+  "before:transition-all before:duration-300 before:ease-in-out hover:before:h-full hover:text-black ";
 
 const Cv = ({ children }) => {
   return (
     <div>
-      <Button variant="text-white bg-black py-2 px-4 rounded-lg">
-        {children}
-      </Button>
+      <Button variant={styleDefault}>{children}</Button>
     </div>
   );
 };

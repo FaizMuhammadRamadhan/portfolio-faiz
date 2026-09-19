@@ -6,7 +6,6 @@ const Contact = () => {
   const [formspreeState, sendToFormspree] = useFormspree({ idFormKey });
   const currentYear = new Date().getFullYear();
 
-  // 2. Inisialisasi React Hook Form
   const {
     register,
     handleSubmit,
@@ -14,13 +13,16 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  // 3. Handler saat form disubmit
   const onSubmit = async (data) => {
     const response = await sendToFormspree(data);
     if (response.result) {
-      reset(); // Reset isi input jika berhasil terkirim
+      reset();
     }
   };
+  const styleDefault =
+    "relative z-10 overflow-hidden bg-teal-500 text-black px-2 py-1 md:px-5 md:py-2 rounded font-medium transition-colors duration-300 text-center " +
+    "before:absolute before:left-0 before:top-0 before:w-full before:h-0 before:bg-black before:-z-10 " +
+    "before:transition-all before:duration-300 before:ease-in-out hover:before:h-full hover:text-white ";
 
   return (
     <section id="contact" class="bg-teal-500 text-white pt-20 px-6 md:px-16">
@@ -98,18 +100,18 @@ const Contact = () => {
             </div>
 
             <div>
-              <h4 class="text-sm text-white font-medium mb-3">
+              <h4 class="text-lg text-white font-medium mb-3">
                 Temukan Saya di
               </h4>
               <div class="flex space-x-3">
                 <Link to="https://github.com/FaizMuhammadRamadhan">
-                  <i className="ri-github-fill text-slate-200 text-3xl"></i>
+                  <i className="ri-github-fill text-slate-200 text-4xl hover:text-black"></i>
                 </Link>
                 <Link to="https://www.linkedin.com/in/faiz-muhammad-ramadhan/">
-                  <i className="ri-linkedin-box-fill text-slate-200 text-3xl"></i>
+                  <i className="ri-linkedin-box-fill text-slate-200 text-4xl hover:text-black"></i>
                 </Link>
                 <Link to="https://gitlab.com/FaizMuhammadRamadhan">
-                  <i className="ri-gitlab-line text-slate-200 text-3xl"></i>
+                  <i className="ri-gitlab-line text-slate-200 text-4xl hover:text-black"></i>
                 </Link>
               </div>
             </div>
@@ -208,7 +210,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={formspreeState.submitting}
-                  class="w-full bg-teal-500 hover:bg-teal-600 text-gray-950 font-bold py-3.5 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2 disabled:opacity-50"
+                  class={`w-full ${styleDefault} justify-center space-x-2 disabled:opacity-50`}
                 >
                   <span>
                     {formspreeState.submitting ? "Mengirim..." : "Kirim Pesan"}
@@ -219,7 +221,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <footer className="py-5 mt-10 text-center">© Copyright {currentYear} Faiz Muhammad Ramadhan | All Rights Reserved</footer>
+      <footer className="py-5 mt-10 text-center">
+        © Copyright {currentYear} Faiz Muhammad Ramadhan | All Rights Reserved
+      </footer>
     </section>
   );
 };
