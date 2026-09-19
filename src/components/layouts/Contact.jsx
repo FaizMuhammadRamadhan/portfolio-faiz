@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { useForm as useFormspree } from "@formspree/react";
 import { Link } from "react-router-dom";
 const Contact = () => {
-  const idFormKey = "m";
+  const idFormKey = "maennzpv";
   const [formspreeState, sendToFormspree] = useFormspree({ idFormKey });
   const currentYear = new Date().getFullYear();
 
