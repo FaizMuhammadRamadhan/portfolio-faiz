@@ -1,0 +1,51 @@
+export const sertifikat = [
+  {
+    id: 1,
+    title: "Belajar Dasar Pemrograman Web",
+    provider: "Dicoding",
+    date: "16 September 2024 - 16 September 2027",
+    link: "https://www.dicoding.com/certificates/1RXYL569QPVM",
+  },
+  {
+    id: 2,
+    title: "Frontend Developer (React)",
+    provider: "HackerRank",
+    date: "13 October 2024",
+    link: "https://www.hackerrank.com/certificates/iframe/8b6622e590c0",
+  },
+  {
+    id: 3,
+    title: "Belajar Dasar Pemrograman JavaScript",
+    provider: "Dicoding",
+    date: "30 November 2024 - 30 November 2027",
+    link: "https://www.dicoding.com/certificates/MRZMY7YRLZYQ",
+  },
+  {
+    id: 4,
+    title: "Belajar Membuat Front-End Web untuk Pemula",
+    provider: "Dicoding",
+    date: "13 December 2024 - 13 December 2027",
+    link: "https://www.dicoding.com/certificates/L4PQ50M74ZO1",
+  },
+  {
+    id: 5,
+    title: "Belajar Membuat Aplikasi Web dengan React",
+    provider: "Dicoding",
+    date: "23 January 2025 - 23 January 2028",
+    link: "https://www.dicoding.com/certificates/L4PQE4J12PO1",
+  },
+  {
+    id: 6,
+    title: "Belajar Dasar AI",
+    provider: "Dicoding",
+    date: "31 January 2025 - 31 January 2028",
+    link: "https://www.dicoding.com/certificates/07Z63GMDMZQR",
+  },
+  {
+    id: 7,
+    title: "Introduction to Front-End Development",
+    provider: "Coursera (Meta)",
+    date: "9 September 2026",
+    link: "https://coursera.org/share/76b8223374d0a07cfb8b117b3b0d7d44",
+  },
+];
