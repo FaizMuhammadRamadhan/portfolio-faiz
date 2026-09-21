@@ -33,7 +33,7 @@ const NavLink = () => {
             key={itemlink.id}
             href={itemlink.navigasi}
             onClick={(e) => handleScroll(e, itemlink.navigasi)}
-            className="relative px-[69.7px] md:px-10 py-[17px] md:py-[24px] md:text-black transition-all duration-300 before:absolute before:left-0 before:top-0 before:w-full before:h-0 before:bg-white md:before:bg-black before:transition-all before:duration-300 before:ease-in-out before:-z-10 hover:before:h-full text-white hover:text-black md:hover:text-white overflow-hidden"
+            className="relative uppercase font-semibold px-[69.7px] md:px-10 py-[17px] md:py-[24px] md:text-black transition-all duration-300 before:absolute before:left-0 before:top-0 before:w-full before:h-0 before:bg-white md:before:bg-black before:transition-all before:duration-300 before:ease-in-out before:-z-10 hover:before:h-full text-white hover:text-black md:hover:text-white overflow-hidden"
           >
             {itemlink.nama}
           </a>

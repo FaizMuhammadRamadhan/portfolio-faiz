@@ -5,6 +5,34 @@ import { navigation } from "../../data/navigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState(""); // State untuk menyimpan section yang sedang aktif
+
+  // Detect section saat ini dengan IntersectionObserver
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -60% 0px", // Trigger saat section berada di area tengah-atas viewport
+      threshold: 0,
+    };
+
+    const handleIntersect = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(`#${entry.target.id}`);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+
+    // Ambil semua elemen section berdasarkan ID di file navigation.js
+    navigation.forEach((item) => {
+      const element = document.querySelector(item.navigasi);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -32,20 +60,12 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const handleDownloadCV = () => {
-    setIsOpen(false);
-    const link = document.createElement("a");
-    link.href = "/doc/cv.pdf";
-    link.download = "cv-faiz.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <header className="bg-white shadow-md">
       <nav className="justify-between flex items-center fixed top-0 left-0 w-full z-30 bg-white/90 backdrop-blur-md shadow-sm px-6 py-2.5 md:py-0">
-        <NavLink />
+        {/* Oper activeSection ke NavLink */}
+        <NavLink activeSection={activeSection} />
 
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -106,16 +126,23 @@ const Navbar = () => {
           </div>
 
           <div className="flex flex-col items-end gap-6 my-auto w-full">
-            {navigation.map((itemlink) => (
-              <a
-                key={itemlink.id}
-                href={itemlink.navigasi}
-                onClick={(e) => handleScroll(e, itemlink.navigasi)}
-                className="text-slate-300 hover:text-teal-400 font-medium text-lg transition-all duration-200 transform hover:-translate-x-1 text-right"
-              >
-                {itemlink.nama}
-              </a>
-            ))}
+            {navigation.map((itemlink) => {
+              const isActive = activeSection === itemlink.navigasi;
+              return (
+                <a
+                  key={itemlink.id}
+                  href={itemlink.navigasi}
+                  onClick={(e) => handleScroll(e, itemlink.navigasi)}
+                  className={`capitalize font-medium text-lg transition-all duration-200 transform hover:-translate-x-1 text-right ${
+                    isActive
+                      ? "text-teal-400 font-semibold scale-105"
+                      : "text-slate-300 hover:text-teal-400"
+                  }`}
+                >
+                  {itemlink.nama}
+                </a>
+              );
+            })}
           </div>
 
           <div className="w-full py-6 border-t border-slate-800 flex justify-end">
