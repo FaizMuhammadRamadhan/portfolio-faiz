@@ -1,13 +1,17 @@
-import { StrictMode } from "react";
+import { StrictMode, lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Index from "./pages/index.jsx";
-import 'remixicon/fonts/remixicon.css';
+
+const Index = lazy(() => import("./pages/index.jsx"));
 
 const rtr = createBrowserRouter([
   {
-    element: <Index />,
+    element: (
+      <Suspense fallback={<div className="min-h-screen bg-gray-100" />}>
+        <Index />
+      </Suspense>
+    ),
     path: "/",
   },
 ]);
@@ -15,5 +19,5 @@ const rtr = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={rtr} />
-  </StrictMode>,
+  </StrictMode>
 );
