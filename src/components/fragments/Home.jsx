@@ -12,11 +12,16 @@ const Home = () => {
         </div>
 
         <div className="w-full lg:w-2/5 flex justify-center items-center p-4">
-          <div className="relative flex justify-center items-center p-6 bg-white/40 backdrop-blur-md rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border border-white/50 shadow-xl transition-all duration-500 hover:rounded-[50%_50%_30%_70%/50%_30%_70%_50%]">
+          <div className="relative flex justify-center items-center p-6 bg-white/40 backdrop-blur-sm sm:backdrop-blur-md rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border border-white/50 shadow-xl transition-all duration-500 hover:rounded-[50%_50%_30%_70%/50%_30%_70%_50%]">
             <img
               src="/images/profile.png"
               alt="Faiz Muhammad Ramadhan"
               className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-2xl relative z-10"
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
+              width="400"
+              height="400"
             />
           </div>
         </div>
