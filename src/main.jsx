@@ -1,7 +1,9 @@
-import { StrictMode, lazy, Suspense } from "react";
+import { StrictMode, lazy, Suspense, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import('remixicon/fonts/remixicon.css');
 
 const Index = lazy(() => import("./pages/index.jsx"));
 
