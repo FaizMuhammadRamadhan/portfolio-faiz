@@ -2,7 +2,15 @@ import Desc from "../Desc";
 import SubTitle from "../SubTitle";
 import Title from "../Title";
 
-const BodyProject = ({ role, application, desc, tools, image, reverse, index }) => {
+const BodyProject = ({
+  role,
+  application,
+  desc,
+  tools,
+  image,
+  reverse,
+  index,
+}) => {
   const offsetClass = index % 2 === 0 ? "md:mr-16" : "md:ml-16";
 
   return (
@@ -66,8 +74,12 @@ const BodyProject = ({ role, application, desc, tools, image, reverse, index }) 
 
               <img
                 src={image}
-                alt={application}
+                alt={`Tampilan antarmuka aplikasi ${application}`}
                 className="w-full h-full object-cover object-top transform group-hover/img:scale-105 transition-transform duration-700 ease-out"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="400"
               />
             </div>
           </div>
