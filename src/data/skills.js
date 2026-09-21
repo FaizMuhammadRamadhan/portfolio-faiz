@@ -5,12 +5,12 @@ export const skills = [
     subtitle: "Building Responsive & Interactive Interfaces",
     desc: `Mengembangkan antarmuka web yang responsive dengan komponen yang reusable, state management, form handling, dan intergasi REST API`,
     tools: [
-      { name: "HTML", src: "/images/html.png" },
-      { name: "CSS", src: "/images/css.png" },
-      { name: "TailwindCSS", src: "/images/tailwind.png" },
-      { name: "JavaScript", src: "/images/javascript.png" },
-      { name: "ReactJS", src: "/images/react.png" },
-      { name: "NextJS", src: "/images/nextjs.png" },
+      { name: "HTML", src: "/images/html.webp" },
+      { name: "CSS", src: "/images/css.webp" },
+      { name: "TailwindCSS", src: "/images/tailwind.webp" },
+      { name: "JavaScript", src: "/images/javascript.webp" },
+      { name: "ReactJS", src: "/images/react.webp" },
+      { name: "NextJS", src: "/images/nextjs.webp" },
     ],
   },
   {
@@ -20,7 +20,7 @@ export const skills = [
     desc: `Membangun backend menggunakan Laravel dan PHP, termasuk authentication, authorization, REST API, validation, middleware, dan business logic.`,
     tools: [
       { name: "Laravel", src: "/images/laravel.png" },
-      { name: "ExpressJS", src: "/images/expressjs.png" },
+      { name: "ExpressJS", src: "/images/expressjs.webp" },
     ],
   },
   {
@@ -29,8 +29,8 @@ export const skills = [
     subtitle: "Designing structured & reliable data systems",
     desc: `Merancang struktur database, relasi antar tabel, migration, seeding, serta query untuk mendukung kebutuhan aplikasi.`,
     tools: [
-      { name: "PostgreSQL", src: "/images/postgresql.png" },
-      { name: "MySQL", src: "/images/mysql.png" },
+      { name: "PostgreSQL", src: "/images/postgresql.webp" },
+      { name: "MySQL", src: "/images/mysql.webp" },
     ],
   },
 ];
