@@ -3,7 +3,7 @@ export const skills = [
     id: 1,
     title: "Frontend Development",
     subtitle: "Building Responsive & Interactive Interfaces",
-    desc: `Mengembangkan antarmuka web yang responsive dengan komponen yang reusable, state management, form handling, dan intergasi REST API`,
+    desc: "Developing responsive web interfaces with reusable components, modern state management, robust form handling, and dynamic REST API integrations.",
     tools: [
       { name: "HTML", src: "/images/html.webp" },
       { name: "CSS", src: "/images/css.webp" },
@@ -16,8 +16,8 @@ export const skills = [
   {
     id: 2,
     title: "Backend Development",
-    subtitle: "Building Scalable Web Applications & APIs",
-    desc: `Membangun backend menggunakan Laravel dan PHP, termasuk authentication, authorization, REST API, validation, middleware, dan business logic.`,
+    subtitle: "Building Scalable Server-Side Systems & APIs",
+    desc: "Architecting backend applications using Laravel and Express.js, featuring secure authentication, role-based access control (RBAC), RESTful APIs, and custom business logic.",
     tools: [
       { name: "Laravel", src: "/images/laravel.png" },
       { name: "ExpressJS", src: "/images/expressjs.webp" },
@@ -25,9 +25,9 @@ export const skills = [
   },
   {
     id: 3,
-    title: "Database",
-    subtitle: "Designing structured & reliable data systems",
-    desc: `Merancang struktur database, relasi antar tabel, migration, seeding, serta query untuk mendukung kebutuhan aplikasi.`,
+    title: "Database Management",
+    subtitle: "Data Structure & Queries",
+    desc: "Designing ERD schemas, table relationships, migrations, and writing optimized SQL queries for maximum data performance.",
     tools: [
       { name: "PostgreSQL", src: "/images/postgresql.webp" },
       { name: "MySQL", src: "/images/mysql.webp" },

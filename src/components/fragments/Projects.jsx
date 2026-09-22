@@ -1,8 +1,6 @@
 import BodyProject from "../elements/projects/BodyProject";
 import HeaderTitle from "../elements/projects/HeaderTitle";
 
-/* Pengisi dekoratif: kisi kotak kecil teal yang memudar.
-   Hanya muncul di layar lebar, di sisi kosong sebelah kartu. */
 const SquareGrid = () => (
   <div aria-hidden="true" className="flex flex-col items-center gap-6">
     <div className="grid grid-cols-3 gap-2">
@@ -28,9 +26,9 @@ const Projects = ({ projectsData }) => {
       <div className="mb-12 sm:mb-16">
         <HeaderTitle
           changeTitleStyle={true}
-          SubTitle={"Featured Projects"}
-          Titlee={"Project Yang Pernah Dibuat"}
-          Desce={`Kumpulan hasil karya dan aplikasi web yang telah saya kembangkan, berfokus pada solusi fungsional, performa tinggi, dan pengalaman pengguna yang optimal.`}
+          SubTitle={"FEATURED PROJECTS"}
+          Titlee={"Selected Works & Applications"}
+          Desce={`A showcase of web applications I have built, focusing on functional solutions, scalable backend logic, and intuitive user experiences.`}
         />
       </div>
 

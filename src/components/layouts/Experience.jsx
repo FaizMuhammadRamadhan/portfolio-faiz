@@ -39,9 +39,9 @@ const Experience = () => {
     <div id="experience" className="max-w-6xl mx-auto px-4 py-10">
       <HeaderTitle
         changeTitleStyle={false}
-        SubTitle={"perjalanan"}
-        Titlee={"Bagaimana saya belajar & berkembang"}
-        Desce={`Saya belajar dari dasar sebelum praktik: pemahaman konsep dulu, baru diterapkan lewat proyek nyata. Berikut urutan singkat perjalanan teknis saya.`}
+        SubTitle={"CAREER & EXPERIENCE"}
+        Titlee={"My Professional Journey"}
+        Desce={`A timeline of my practical work experience, technical contributions, and impact delivered across web development projects.`}
       />
 
       <div className="flex flex-col md:flex-row gap-8 mt-10">

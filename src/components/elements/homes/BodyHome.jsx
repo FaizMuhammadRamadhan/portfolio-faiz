@@ -24,7 +24,7 @@ const BodyHome = () => {
   return (
     <div className="w-full gap-y-4 md:gap-y-6 flex flex-col pt-4 lg:pt-8">
       <Desc variant="text-teal-600 text-xl md:text-2xl lg:text-3xl font-semibold">
-        halo, saya -
+        Hi, I am —
       </Desc>
       <Title variant="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold w-full leading-tight">
         Faiz Muhammad Ramadhan
@@ -33,25 +33,24 @@ const BodyHome = () => {
         FullStack Web Developer
       </SubTitle>
       <Desc variant="text-gray-700 text-base md:text-xl max-w-4xl leading-relaxed">
-        Saya menghadirkan solusi web end-to-end berbasis stack modern. Mulai
-        dari perancangan ERD dan pemrosesan query SQL yang efisien, membangun
-        arsitektur server-side yang kokoh dengan Laravel/Express.js, hingga
-        mengeksekusi antarmuka dinamis berbasis React/Next.js & Tailwind CSS.
-        Dengan keahlian ini, saya siap membangun sistem yang tidak hanya
-        tangguh dan cepat, tetapi juga mudah dikembangkan di masa depan.
+        I deliver end-to-end web solutions built on a modern tech stack. From
+        ERD design and efficient SQL queries to robust server-side architecture
+        using Laravel and Express.js, as well as dynamic user interfaces with
+        React, Next.js, and Tailwind CSS. With these skills, I build systems
+        that are fast, dependable, and easy to scale.
       </Desc>
       <div className="flex flex-col sm:flex-row gap-4 py-4 w-full sm:w-auto">
         <Button
           onClick={() => scrollToSection("projects")}
           variant={hoverSlideStyle}
         >
-          Lihat Project
+          View Projects
         </Button>
-        <Button 
-          onClick={() => scrollToSection("contact")} 
+        <Button
+          onClick={() => scrollToSection("contact")}
           variant={hoverSlideOutlineStyle}
         >
-          Hubungi Saya
+          Contact Me
         </Button>
       </div>
     </div>

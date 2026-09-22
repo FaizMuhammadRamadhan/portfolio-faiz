@@ -10,8 +10,9 @@ const Certificate = () => {
         <div className="mb-8 sm:mb-12">
           <HeaderTitle
             changeTitleStyle={true}
-            Titlee={"Sertifikasi"}
-            SubTitle={"Bukti Belajar"}
+            Titlee={"CREDENTIALS & LEARNING"}
+            SubTitle={"Certifications"}
+            Desce={"Formal certifications and verified skills achieved through structured technical courses and professional training platforms."}
           />
         </div>
 

@@ -35,9 +35,9 @@ const Contact = () => {
           <span className="text-black font-semibold tracking-wider uppercase text-sm flex gap-3">
             <span className="h-1 my-auto bg-black w-10"></span>Contact Me
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">Mari Bekerja Sama</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2">Let's Work Together</h2>
           <p className="text-white mt-2 max-w-lg">
-            Tertarik untuk membangun proyek bersama atau sekadar menyapa? Silakan kirim pesan di bawah ini.
+            Interested in collaborating on a project or just want to say hello? Feel free to drop a message below.
           </p>
         </div>
 
@@ -66,14 +66,14 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-sm text-black font-medium">Lokasi</h4>
+                  <h4 className="text-sm text-black font-medium">Location</h4>
                   <p className="text-lg font-semibold">Tangerang, Indonesia</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <h4 className="text-lg text-white font-medium mb-3">Temukan Saya di</h4>
+              <h4 className="text-lg text-white font-medium mb-3">Find me on</h4>
               <div className="flex space-x-3">
                 <Link to="https://github.com/FaizMuhammadRamadhan">
                   <i className="ri-github-fill text-slate-200 text-4xl hover:text-black"></i>
@@ -100,26 +100,26 @@ const Contact = () => {
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Nama Lengkap</label>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
                     <input
                       type="text"
-                      placeholder="Nama Anda"
-                      {...register("name", { required: "Nama wajib diisi" })}
+                      placeholder="Your Name"
+                      {...register("name", { required: "Name is required" })}
                       className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-400 transition-colors"
                     />
                     {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>}
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Alamat Email</label>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
                     <input
                       type="email"
-                      placeholder="company@gmail.com"
+                      placeholder="youremail@example.com"
                       {...register("email", {
                         required: "Email wajib diisi",
                         pattern: {
                           value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                          message: "Format email tidak valid",
+                          message: "Invalid email address",
                         },
                       })}
                       className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-400 transition-colors"
@@ -129,24 +129,24 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Subjek</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
                   <input
                     type="text"
-                    placeholder="Subjek Pesan / Proyek"
-                    {...register("subject", { required: "Subjek wajib diisi" })}
+                    placeholder="Project Inquiry / General Question"
+                    {...register("subject", { required: "Subject is required" })}
                     className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-400 transition-colors"
                   />
                   {errors.subject && <p className="text-red-400 text-xs mt-1">{errors.subject.message}</p>}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Pesan</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                   <textarea
                     rows="5"
-                    placeholder="Tuliskan detail proyek atau pertanyaan Anda di sini..."
+                    placeholder="Write your project details or questions here..."
                     {...register("message", {
-                      required: "Pesan wajib diisi",
-                      minLength: { value: 10, message: "Minimal 10 karakter" },
+                      required: "Message is required",
+                      minLength: { value: 10, message: "Minimum 10 characters required" },
                     })}
                     className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-400 transition-colors resize-none"
                   ></textarea>
@@ -158,7 +158,7 @@ const Contact = () => {
                   disabled={formspreeState.submitting}
                   className={`w-full ${styleDefault} justify-center space-x-2 disabled:opacity-50`}
                 >
-                  <span>{formspreeState.submitting ? "Mengirim..." : "Kirim Pesan"}</span>
+                  <span>{formspreeState.submitting ? "Sending..." : "Send Message"}</span>
                 </button>
               </form>
             )}

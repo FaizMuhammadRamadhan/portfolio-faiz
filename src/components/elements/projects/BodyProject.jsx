@@ -50,8 +50,7 @@ const BodyProject = ({
       >
         <div className="flex h-full min-h-0 flex-col p-6 sm:p-8 lg:p-10">
           <div className="flex shrink-0 flex-wrap items-center gap-x-3 gap-y-2 border-b border-slate-800 pb-4">
-            <span className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-3 py-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-teal-400" />
+            <span className="inline-flex items-center gap-2 rounded border border-teal-500/30 bg-teal-500/10 px-3 py-1">
               <SubTitle variant="text-teal-300 text-xs font-semibold tracking-wide">
                 {role}
               </SubTitle>
@@ -132,7 +131,7 @@ const BodyProject = ({
                   href={demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative z-10 inline-flex items-center gap-2 overflow-hidden rounded bg-teal-500 px-4 py-2.5 text-sm font-semibold text-slate-950 transition-colors duration-300 before:absolute before:left-0 before:top-0 before:-z-10 before:h-0 before:w-full before:bg-slate-950 before:transition-all before:duration-300 before:ease-in-out hover:text-teal-400 hover:before:h-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400"
+                  className="relative z-10 inline-flex items-center gap-2 overflow-hidden bg-teal-500 px-4 py-2.5 text-sm font-semibold text-slate-950 transition-colors duration-300 before:absolute before:left-0 before:top-0 before:-z-10 before:h-0 before:w-full before:rounded-inherit before:bg-slate-950 before:transition-all before:duration-300 before:ease-in-out hover:text-teal-400 hover:before:h-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-400"
                 >
                   Buka situsnya
                   <svg
