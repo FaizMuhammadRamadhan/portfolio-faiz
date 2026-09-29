@@ -41,7 +41,7 @@ export const indexproject = [
     ],
     tools: ["Express.js", "PostgreSQL"],
     image: "/images/projectimg/dashboardumb.webp",
-    demoUrl: null
+    demoUrl: "https://statistik.mercubuana.ac.id/"
   },
   {
     id: 4,
