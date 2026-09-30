@@ -12,16 +12,130 @@ const Home = () => {
         </div>
 
         <div className="w-full lg:w-2/5 flex justify-center items-center p-4">
-          <div className="relative flex justify-center items-center p-6 bg-white/40 backdrop-blur-sm sm:backdrop-blur-md rounded-[30%_70%_70%_30%/30%_30%_70%_70%] border border-white/50 shadow-xl transition-all duration-500 hover:rounded-[50%_50%_30%_70%/50%_30%_70%_50%]">
+          <div className="relative group w-full max-w-md flex justify-center items-end">
+            {/* Gradient background */}
+            <div
+              className="
+        absolute
+        w-[320px]
+        h-[320px]
+        sm:w-[380px]
+        sm:h-[380px]
+        lg:w-[400px]
+        lg:h-[400px]
+
+        rounded-full
+
+        bg-gradient-to-br
+        from-teal-100
+        via-slate-100
+        to-cyan-100
+
+        opacity-80
+        blur-[2px]
+
+        transition-all
+        duration-700
+        ease-out
+
+        group-hover:scale-110
+        group-hover:rotate-6
+      "
+            />
+
+            <div
+              className="
+        absolute
+        bottom-4
+        w-[230px]
+        h-[45px]
+
+        bg-slate-400/20
+        blur-2xl
+        rounded-full
+
+        transition-all
+        duration-700
+
+        group-hover:w-[270px]
+        group-hover:bg-teal-400/20
+      "
+            />
+
+            {/* Foto */}
             <img
               src="/images/profile.webp"
-              alt=" Profile Faiz Muhammad Ramadhan"
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-cover rounded-2xl relative z-10"
+              alt="Profile Faiz Muhammad Ramadhan"
+              className="
+        relative
+        z-10
+
+        w-full
+        max-w-xs
+        sm:max-w-sm
+        lg:max-w-md
+
+        h-auto
+        object-contain
+
+        transition-all
+        duration-700
+        ease-[cubic-bezier(0.22,1,0.36,1)]
+
+        drop-shadow-[0_20px_20px_rgba(0,0,0,0.12)]
+
+        group-hover:-translate-y-5
+        group-hover:scale-[1.04]
+        group-hover:drop-shadow-[0_35px_30px_rgba(0,0,0,0.18)]
+      "
               fetchPriority="high"
               loading="eager"
               decoding="sync"
               width="400"
               height="400"
+            />
+
+            {/* Decorative circle */}
+            <div
+              className="
+        absolute
+        top-8
+        right-8
+
+        w-3
+        h-3
+
+        rounded-full
+        bg-teal-500
+
+        opacity-70
+
+        transition-all
+        duration-500
+
+        group-hover:scale-150
+        group-hover:opacity-100
+      "
+            />
+
+            {/* Decorative small line */}
+            <div
+              className="
+        absolute
+        bottom-24
+        left-6
+
+        w-10
+        h-[2px]
+
+        bg-teal-500/50
+
+        transition-all
+        duration-500
+
+        group-hover:w-16
+        group-hover:bg-teal-500
+      "
             />
           </div>
         </div>
