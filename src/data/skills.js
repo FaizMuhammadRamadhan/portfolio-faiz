@@ -1,6 +1,17 @@
 export const skills = [
   {
     id: 1,
+    title: "Business Analysis & Systems Design",
+    subtitle: "Analyzing Requirements & Process Modeling",
+    desc: "Gathering business requirements, mapping end-to-end workflows, designing UML diagrams (Use Case & Activity), and architecting database ERDs to translate business needs into technical solutions.",
+    tools: [
+      { name: "Draw.io", src: "/images/drawio.webp" },
+      { name: "dbdiagram.io", src: "/images/dbdiagram.webp" },
+      { name: "UML", src: "/images/uml.webp" },
+    ],
+  },
+  {
+    id: 2,
     title: "Frontend Development",
     subtitle: "Building Responsive & Interactive Interfaces",
     desc: "Developing responsive web interfaces with reusable components, modern state management, robust form handling, and dynamic REST API integrations.",
@@ -14,7 +25,7 @@ export const skills = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Backend Development",
     subtitle: "Building Scalable Server-Side Systems & APIs",
     desc: "Architecting backend applications using Laravel and Express.js, featuring secure authentication, role-based access control (RBAC), RESTful APIs, and custom business logic.",
@@ -24,7 +35,7 @@ export const skills = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Database Management",
     subtitle: "Data Structure & Queries",
     desc: "Designing ERD schemas, table relationships, migrations, and writing optimized SQL queries for maximum data performance.",

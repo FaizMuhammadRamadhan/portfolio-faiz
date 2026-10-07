@@ -142,7 +142,7 @@ const Home = () => {
       </div>
 
       <div className="w-full px-4 sm:px-8 lg:px-1 md:-mt-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-slate-100 p-4 sm:p-6 rounded">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-slate-100 p-4 sm:p-6 rounded">
           {skills.map((item) => (
             <CardIndex
               key={item.id}

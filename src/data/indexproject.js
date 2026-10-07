@@ -10,7 +10,7 @@ export const indexproject = [
       "Built responsive user interfaces using TailwindCSS, JavaScript, and AJAX.",
       "Performed independent unit testing and debugging to ensure system stability."
     ],
-    tools: ["Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
+    tools: ["DbDiagram", "Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
     image: "/images/projectimg/magangumb.webp",
     demoUrl: null
   },
@@ -25,7 +25,7 @@ export const indexproject = [
       "Collaborated with the team to conduct system testing and quality assurance.",
       "Implemented responsive UI components using TailwindCSS and AJAX."
     ],
-    tools: ["Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
+    tools: ["DbDiagram", "Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
     image: "/images/projectimg/pui.webp",
     demoUrl: "https://training-pui.mercubuana.ac.id/"
   },
@@ -95,7 +95,7 @@ export const indexproject = [
       "Built ticketing features and end-to-end checkout flows.",
       "Designed dynamic UI components and conducted independent functionality testing."
     ],
-    tools: ["Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
+    tools: ["DbDiagram", "Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
     image: "/images/projectimg/ems.webp",
     demoUrl: null
   },
@@ -109,7 +109,7 @@ export const indexproject = [
       "Created the ERD and built the fullstack architecture using Laravel and PostgreSQL.",
       "Executed independent system testing and UI adjustments."
     ],
-    tools: ["Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
+    tools: ["DbDiagram", "Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
     image: "/images/projectimg/bms.webp",
     demoUrl: null
   },

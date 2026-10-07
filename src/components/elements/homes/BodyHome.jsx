@@ -30,14 +30,16 @@ const BodyHome = () => {
         Faiz Muhammad Ramadhan
       </Title>
       <SubTitle variant="text-xl md:text-2xl lg:text-3xl text-gray-700 font-medium">
-        FullStack Web Developer
+        Fullstack Web Developer & Systems Business Analyst
       </SubTitle>
       <Desc variant="text-gray-700 text-base md:text-xl max-w-4xl leading-relaxed">
-        I deliver end-to-end web solutions built on a modern tech stack. From
-        ERD design and efficient SQL queries to robust server-side architecture
-        using Laravel and Express.js, as well as dynamic user interfaces with
-        React, Next.js, and Tailwind CSS. With these skills, I build systems
-        that are fast, dependable, and easy to scale.
+        Experienced in building scalable web applications and designing
+        end-to-end business processes. Skilled in fullstack development across
+        frontend (React.js, Next.js) and backend (Laravel, Express.js), along
+        with database architecture (PostgreSQL). Adept at gathering business
+        requirements, mapping complex workflows, designing ERDs, and translating
+        business needs into high-performing technical solutions that optimize
+        operational efficiency.
       </Desc>
       <div className="flex flex-col sm:flex-row gap-4 py-4 w-full sm:w-auto">
         <Button
