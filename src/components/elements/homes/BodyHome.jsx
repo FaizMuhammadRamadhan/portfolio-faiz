@@ -33,13 +33,13 @@ const BodyHome = () => {
         Fullstack Web Developer & Systems Business Analyst
       </SubTitle>
       <Desc variant="text-gray-700 text-base md:text-xl max-w-4xl leading-relaxed">
-        Experienced in building scalable web applications and designing
-        end-to-end business processes. Skilled in fullstack development across
-        frontend (React.js, Next.js) and backend (Laravel, Express.js), along
-        with database architecture (PostgreSQL). Adept at gathering business
-        requirements, mapping complex workflows, designing ERDs, and translating
-        business needs into high-performing technical solutions that optimize
-        operational efficiency.
+        Experienced in translating user requirements into structured business
+        processes, system workflows, and scalable web applications. Skilled in
+        requirements analysis, business process modeling, ERD design, database
+        architecture, and end-to-end system development using React.js, Next.js,
+        Laravel, Express.js, and PostgreSQL. Adept at bridging business needs
+        and technical solutions to improve operational efficiency and deliver
+        user-oriented systems.
       </Desc>
       <div className="flex flex-col sm:flex-row gap-4 py-4 w-full sm:w-auto">
         <Button

@@ -1,14 +1,16 @@
+
 export const indexproject = [
   {
     id: 1,
-    role: "Fullstack Developer / Maintainer",
+    role: "Fullstack Developer / Systems Business Analyst",
     application: "UMB Internship Recruitment System",
-    desc: "An internship recruitment platform for Universitas Mercu Buana that streamlines operational processes and integrates students, departments, and HR.",
+    desc: "An internship recruitment platform for Universitas Mercu Buana, developed to streamline recruitment workflows and support coordination between students, departments, and HR.",
     contributions: [
-      "Analyzed system requirements, designed business processes, and built ERD database schemas.",
+      "Analyzed user requirements and translated business needs into end-to-end recruitment workflows and system logic.",
+      "Designed ERD database schemas to structure recruitment data and relationships.",
       "Developed backend features and RESTful APIs using Laravel and PostgreSQL.",
       "Built responsive user interfaces using TailwindCSS, JavaScript, and AJAX.",
-      "Performed independent unit testing and debugging to ensure system stability."
+      "Tested and debugged application features to ensure system reliability and optimized query performance for 100+ student applications."
     ],
     tools: ["DbDiagram", "Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
     image: "/images/projectimg/magangumb.webp",
@@ -16,14 +18,15 @@ export const indexproject = [
   },
   {
     id: 2,
-    role: "Fullstack Developer",
-    application: "PUI LPPM UMB / Maintainer",
+    role: "Fullstack Developer / Systems Business Analyst",
+    application: "Pusat Unggulan Ilmu Pengetahuan & Teknologi (PUI) System",
     desc: "A web platform for laboratory testing services and lecturer expertise management at Universitas Mercu Buana.",
     contributions: [
-      "Analyzed user requirements and mapped business workflows and ERD database structures.",
-      "Built fullstack features for service requests and lecturer profile management.",
-      "Collaborated with the team to conduct system testing and quality assurance.",
-      "Implemented responsive UI components using TailwindCSS and AJAX."
+      "Gathered and analyzed user requirements to understand operational needs and system functionality.",
+      "Designed the initial Entity Relationship Diagram (ERD) to define database structures and relationships.",
+      "Collaborated with a 2-member team to develop the system from initial design through completion.",
+      "Built full-stack features for service requests and lecturer profile management.",
+      "Implemented responsive UI components using TailwindCSS and AJAX and collaborated on system testing and quality assurance."
     ],
     tools: ["DbDiagram", "Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
     image: "/images/projectimg/pui.webp",
@@ -33,11 +36,11 @@ export const indexproject = [
     id: 3,
     role: "Backend Developer",
     application: "UMB Business Intelligence Dashboard",
-    desc: "A business intelligence system displaying centralized analytical data across Universitas Mercu Buana.",
+    desc: "A business intelligence dashboard that centralizes analytical data to support institutional reporting and data-driven decision-making at Universitas Mercu Buana.",
     contributions: [
-      "Wrote complex SQL queries to extract and transform data based on business requirements.",
-      "Designed and built RESTful APIs using Express.js to serve data to the frontend.",
-      "Optimized query performance for PostgreSQL database interactions."
+      "Translated reporting requirements into SQL queries for data extraction and transformation.",
+      "Developed 20+ RESTful API endpoints using Express.js to integrate and deliver data to the frontend.",
+      "Optimized PostgreSQL query performance to improve reporting speed and data processing efficiency by 30%."
     ],
     tools: ["Express.js", "PostgreSQL"],
     image: "/images/projectimg/dashboardumb.webp",
@@ -49,9 +52,9 @@ export const indexproject = [
     application: "Partnership System (SIKERMA)",
     desc: "An internal and external partnership management system for Universitas Mercu Buana.",
     contributions: [
-      "Fixed bugs and improved features in the Partnership Proposal module.",
-      "Maintained and enhanced the Partnership Extension and Master Data modules.",
-      "Optimized frontend-backend data flow using Laravel, AJAX, and PostgreSQL."
+      "Maintained and enhanced the Partnership Proposal module by resolving bugs and improving existing features.",
+      "Managed ongoing maintenance of the Partnership Extension and Master Data modules.",
+      "Optimized frontend-backend data flow using Laravel, AJAX, and PostgreSQL to improve system stability across 10+ active partnership modules."
     ],
     tools: ["Laravel", "JavaScript", "AJAX", "PostgreSQL"],
     image: "/images/projectimg/sikerma.webp",
@@ -60,12 +63,13 @@ export const indexproject = [
   {
     id: 5,
     role: "Fullstack Developer",
-    application: "OLS UMB (Library System)",
-    desc: "university library platform for book records, borrowing operations, visitor tracking, and thesis submissions.",
+    application: "Universitas Mercu Buana Library System (OLS)",
+    desc: "A university library platform for managing book collections, borrowing operations, visitor tracking, and thesis submissions.",
     contributions: [
-      "Developed booking modules for discussion rooms and reference rooms.",
-      "Built the journal collection management module.",
-      "Integrated AJAX-based dynamic filtering for seamless book and journal searches."
+      "Developed and enhanced 5+ core features to improve library system functionality and user experience.",
+      "Built booking modules for discussion rooms and reference rooms.",
+      "Developed the journal collection management module.",
+      "Implemented AJAX-based dynamic filtering for book and journal searches."
     ],
     tools: ["Laravel", "JavaScript", "AJAX", "PostgreSQL"],
     image: "/images/projectimg/olsperpus.webp",
@@ -75,11 +79,11 @@ export const indexproject = [
     id: 6,
     role: "Web Developer",
     application: "Sinergi8Consulting Company Profile",
-    desc: "A responsive landing page and company profile website for Sinergi8Consulting.",
+    desc: "A responsive company profile website designed to present Sinergi8Consulting's services, business information, and contact channels.",
     contributions: [
-      "Designed and developed a landing page tailored to client requirements.",
-      "Structured content highlighting company information, core services, and contact channels.",
-      "Customized WordPress theme components for an optimized user experience."
+      "Translated client requirements into a landing page structure and website layout.",
+      "Organized content to communicate company information and core services effectively.",
+      "Customized WordPress theme components to deliver a responsive user experience."
     ],
     tools: ["WordPress"],
     image: "/images/projectimg/sinergi8consulting.webp",
@@ -87,13 +91,14 @@ export const indexproject = [
   },
   {
     id: 7,
-    role: "Fullstack Developer",
+    role: "Fullstack Developer / Systems Business Analyst",
     application: "Event Management System",
-    desc: "A web application for purchasing campus seminar tickets and managing event registrations.",
+    desc: "A web application for campus seminar ticketing and event registration, designed to support event operations and cross-departmental coordination.",
     contributions: [
-      "Analyzed business requirements, designed workflows, and structured the database ERD.",
-      "Built ticketing features and end-to-end checkout flows.",
-      "Designed dynamic UI components and conducted independent functionality testing."
+      "Analyzed event management requirements and translated them into business processes, system workflows, and system logic.",
+      "Designed the database ERD to structure event, registration, and ticketing data.",
+      "Developed ticketing features and end-to-end checkout workflows.",
+      "Built dynamic UI components and tested core functionality to support event operations and the management of 10+ institutional events."
     ],
     tools: ["DbDiagram", "Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
     image: "/images/projectimg/ems.webp",
@@ -101,17 +106,17 @@ export const indexproject = [
   },
   {
     id: 8,
-    role: "Fullstack Developer",
+    role: "Fullstack Developer / Systems Business Analyst",
     application: "BTI Management System",
-    desc: "An internal operational system designed to streamline data management and daily operations for the IT Bureau.",
+    desc: "An internal operational management system developed to streamline data management and daily workflows at the Information Technology Bureau (BTI).",
     contributions: [
-      "Analyzed internal requirements and mapped operational business processes.",
-      "Created the ERD and built the fullstack architecture using Laravel and PostgreSQL.",
-      "Executed independent system testing and UI adjustments."
+      "Analyzed user and operational requirements and mapped end-to-end business processes from scratch.",
+      "Translated business processes into system workflows and designed the ERD and database architecture.",
+      "Developed the full-stack application using Laravel and PostgreSQL based on the designed system architecture.",
+      "Conducted system testing and refined user interfaces to support internal operational efficiency."
     ],
     tools: ["DbDiagram", "Laravel", "JavaScript", "AJAX", "TailwindCSS", "PostgreSQL"],
     image: "/images/projectimg/bms.webp",
     demoUrl: null
-  },
-  
+  }
 ];
