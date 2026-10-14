@@ -13,7 +13,7 @@ const NavLink = () => {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
     link.href = "/doc/cv.pdf";
-    link.download = "cv-faizz.pdf";
+    link.download = "Faiz-Muhammad-Ramadhan-resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -54,8 +54,8 @@ const styleDefault =
 const Cv = ({ children }) => {
   return (
     <a
-      href="/doc/cv-faizz.pdf"
-      download="cv-faizz.pdf"
+      href="/doc/Faiz-Muhammad-Ramadhan-resume.pdf"
+      download="Faiz-Muhammad-Ramadhan-resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
     >
