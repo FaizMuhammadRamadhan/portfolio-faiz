@@ -147,8 +147,8 @@ const Navbar = () => {
 
           <div className="w-full py-6 border-t border-slate-800 flex justify-end">
             <a
-              href="/doc/cv-faiz.pdf"
-              download="cv-faiz.pdf"
+              href="/doc/cv-faizz.pdf"
+              download="cv-faizz.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
