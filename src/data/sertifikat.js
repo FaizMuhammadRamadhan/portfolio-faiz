@@ -48,4 +48,11 @@ export const sertifikat = [
     date: "9 September 2026",
     link: "https://coursera.org/share/76b8223374d0a07cfb8b117b3b0d7d44",
   },
+  {
+    id: 8,
+    title: "Software Engineer",
+    provider: "Badan Nasional Sertifikasi Profesi (BNSP)",
+    date: "7 January 2026 - 7 January 2029",
+    link: "https://drive.google.com/file/d/1oZetYBAUcm4Egh6QPnXDglbwQs9iXda0/view?usp=sharing",
+  },
 ];
