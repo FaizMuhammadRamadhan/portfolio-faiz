@@ -54,7 +54,7 @@ const styleDefault =
 const Cv = ({ children }) => {
   return (
     <a
-      href="/doc/CV-Faiz-2026.pdf"
+      href="/doc/CV-FaizMuhammadRamadhan.pdf"
       download="CV-Faiz.pdf"
     >
       <Button variant={styleDefault}>{children}</Button>
