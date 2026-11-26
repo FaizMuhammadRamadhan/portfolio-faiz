@@ -12,7 +12,7 @@ const NavLink = () => {
   };
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/doc/CV-Faiz.pdf";
+    link.href = "/doc/CV-FaizMuhammadRamadhan.pdf";
     link.download = "CV-Faiz.pdf";
     document.body.appendChild(link);
     link.click();
